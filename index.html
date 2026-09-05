@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DealsVault — Discover the Best Amazon Deals</title>
+  <meta name="description" content="DealsVault curates hand-picked Amazon deals across electronics, home, fashion, fitness, beauty and gaming — verified ratings, real prices, updated daily.">
+  <meta name="theme-color" content="#0a0a0c">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DealsVault — Discover the Best Amazon Deals">
+  <meta property="og:description" content="Hand-picked Amazon deals, verified and updated daily.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Poppins (display) + Inter (body/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ================= PRELOADER ================= -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__mark">Deals<span>Vault</span></div>
+    <div class="preloader__ring"></div>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__logo">Deals<span>Vault</span></a>
+
+      <nav class="navbar__nav" id="navbarNav" aria-label="Primary">
+        <ul class="navbar__links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#products">Deals</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <a href="https://amazon.in" class="btn btn--dark btn--sm navbar__cta" target="_blank" rel="nofollow sponsored noopener">Shop Now</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <button class="icon-btn" id="searchToggle" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchOverlay">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navbarNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="container search-overlay__inner">
+        <svg class="search-overlay__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="search" id="searchInput" class="search-overlay__input" placeholder="Search products…" aria-label="Search products" autocomplete="off">
+        <button class="icon-btn" id="searchClose" type="button" aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scrim" id="navScrim"></div>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="glow-orb glow-orb--1" data-parallax-speed="0.12"></span>
+        <span class="glow-orb glow-orb--2" data-parallax-speed="0.2"></span>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content" data-reveal>
+          <span class="eyebrow">Handpicked &amp; Verified</span>
+          <h1 class="hero__title">Discover the Best <span class="text-gradient">Amazon Deals</span></h1>
+          <p class="hero__desc">DealsVault locks in the best Amazon prices so you don't have to hunt for them — hand-picked products, honest ratings and real savings, refreshed every day.</p>
+          <div class="hero__actions">
+            <a href="#products" class="btn btn--dark btn--lg">Shop Now</a>
+            <a href="#categories" class="btn btn--outline btn--lg">Explore Categories</a>
+          </div>
+          <div class="hero__proof">
+            <div class="hero__avatars" aria-hidden="true">
+              <span class="hero__avatar">AR</span>
+              <span class="hero__avatar">RM</span>
+              <span class="hero__avatar">PS</span>
+            </div>
+            <p><strong>50,000+</strong> shoppers trust DealsVault every month</p>
+          </div>
+        </div>
+
+        <div class="hero__visual" id="heroVisual">
+          <div class="hero__shape" aria-hidden="true"></div>
+
+          <div class="floating-card floating-card--1" aria-hidden="true">
+            <span class="floating-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path><circle cx="12" cy="15" r="1.5"></circle></svg>
+            </span>
+            <div>
+              <p class="floating-card__title">Verified Deal</p>
+              <p class="floating-card__sub">Checked today</p>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card--2" aria-hidden="true">
+            <span class="floating-card__badge">-40%</span>
+            <p class="floating-card__title">Today's Best Price</p>
+          </div>
+
+          <div class="floating-card floating-card--3" aria-hidden="true">
+            <span class="floating-card__icon">★</span>
+            <div>
+              <p class="floating-card__title">4.9 / 5</p>
+              <p class="floating-card__sub">Avg. rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- ================= FEATURED CATEGORIES ================= -->
+    <section class="categories" id="categories">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Browse</span>
+          <h2>Featured Categories</h2>
+          <p>Explore our top picks across every category you shop.</p>
+        </div>
+
+        <div class="categories__grid" data-reveal-group>
+          <button class="category-card tilt" data-tilt data-reveal data-category-filter="electronics" type="button">
+            <span class="category-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"></rect><line x1="8" y1="20" x2="16" y2="20"></line><line x1="12" y1="16" x2="12" y2="20"></line></svg>
+            </span>
+            <span class="category-card__label">Electronics</span>
+          </button>
+
+          <button class="category-card tilt" data-tilt data-reveal data-category-filter="home-kitchen" type="button">
+            <span class="category-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"></path><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"></path></svg>
+            </span>
+            <span class="category-card__label">Home &amp; Kitchen</span>
+          </button>
+
+          <button class="category-card tilt" data-tilt data-reveal data-category-filter="fashion" type="button">
+            <span class="category-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4a3 3 0 0 0 6 0"></path><path d="M9 4L3 8l2.5 3L9 9v11h6V9l3.5 2L21 8l-6-4"></path></svg>
+            </span>
+            <span class="category-card__label">Fashion</span>
+          </button>
+
+          <button class="category-card tilt" data-tilt data-reveal data-category-filter="fitness" type="button">
+            <span class="category-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="9" width="3" height="6" rx="1"></rect><rect x="19" y="9" width="3" height="6" rx="1"></rect><line x1="7" y1="12" x2="17" y2="12"></line><rect x="5" y="7" width="2" height="10" rx="1"></rect><rect x="17" y="7" width="2" height="10" rx="1"></rect></svg>
+            </span>
+            <span class="category-card__label">Fitness</span>
+          </button>
+
+          <button class="category-card tilt" data-tilt data-reveal data-category-filter="beauty" type="button">
+            <span class="category-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"></path></svg>
+            </span>
+            <span class="category-card__label">Beauty</span>
+          </button>
+
+          <button class="category-card tilt" data-tilt data-reveal data-category-filter="gaming" type="button">
+            <span class="category-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="8" width="20" height="10" rx="5"></rect><line x1="7" y1="11" x2="7" y2="15"></line><line x1="5" y1="13" x2="9" y2="13"></line><circle cx="16" cy="11" r="1"></circle><circle cx="18" cy="14" r="1"></circle></svg>
+            </span>
+            <span class="category-card__label">Gaming</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PRODUCTS ================= -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Deals</span>
+          <h2>Featured Products</h2>
+          <p>A handful of today's best-vaulted picks, refreshed daily.</p>
+        </div>
+
+        <div class="products__filter-chip" id="filterChip" hidden>
+          <span id="filterChipLabel"></span>
+          <button id="filterChipClear" type="button" aria-label="Clear filter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <div class="products__grid" data-reveal-group>
+
+          <!-- Product 1 -->
+          <article class="product-card tilt" data-tilt data-reveal data-category="electronics" data-title="Wireless Noise-Cancelling Headphones">
+            <div class="product-card__media">
+              <span class="badge badge--discount">-37%</span>
+              <img class="product-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f2f2f4'/%3E%3Ccircle cx='200' cy='200' r='70' fill='%23e4e4e9'/%3E%3C/svg%3E" alt="Wireless Noise-Cancelling Headphones placeholder" width="400" height="400" loading="lazy" decoding="async">
+              <span class="tilt-glare" aria-hidden="true"></span>
+            </div>
+            <div class="product-card__body">
+              <span class="badge badge--prime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Prime</span>
+              <h3 class="product-card__title">Wireless Noise-Cancelling Headphones</h3>
+              <div class="rating" data-rating="4.5" aria-label="Rated 4.5 out of 5 stars, 2,341 reviews">
+                <span class="rating__stars" aria-hidden="true"><span class="rating__stars-fill"></span></span>
+                <span class="rating__value">4.5</span>
+                <span class="rating__count">(2,341)</span>
+              </div>
+              <div class="product-card__price">
+                <span class="price-current">₹2,499</span>
+                <span class="price-original">₹3,999</span>
+              </div>
+              <a href="https://amazon.in" class="btn btn--dark btn--full" target="_blank" rel="nofollow sponsored noopener">
+                Buy on Amazon
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card tilt" data-tilt data-reveal data-category="fitness" data-title="Smart Fitness Watch">
+            <div class="product-card__media">
+              <span class="badge badge--discount">-40%</span>
+              <img class="product-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f2f2f4'/%3E%3Ccircle cx='200' cy='200' r='70' fill='%23e4e4e9'/%3E%3C/svg%3E" alt="Smart Fitness Watch placeholder" width="400" height="400" loading="lazy" decoding="async">
+              <span class="tilt-glare" aria-hidden="true"></span>
+            </div>
+            <div class="product-card__body">
+              <span class="badge badge--prime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Prime</span>
+              <h3 class="product-card__title">Smart Fitness Watch</h3>
+              <div class="rating" data-rating="4.3" aria-label="Rated 4.3 out of 5 stars, 1,876 reviews">
+                <span class="rating__stars" aria-hidden="true"><span class="rating__stars-fill"></span></span>
+                <span class="rating__value">4.3</span>
+                <span class="rating__count">(1,876)</span>
+              </div>
+              <div class="product-card__price">
+                <span class="price-current">₹1,799</span>
+                <span class="price-original">₹2,999</span>
+              </div>
+              <a href="https://amazon.in" class="btn btn--dark btn--full" target="_blank" rel="nofollow sponsored noopener">
+                Buy on Amazon
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card tilt" data-tilt data-reveal data-category="home-kitchen" data-title="Digital Air Fryer 4.5L">
+            <div class="product-card__media">
+              <span class="badge badge--discount">-34%</span>
+              <img class="product-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f2f2f4'/%3E%3Ccircle cx='200' cy='200' r='70' fill='%23e4e4e9'/%3E%3C/svg%3E" alt="Digital Air Fryer 4.5L placeholder" width="400" height="400" loading="lazy" decoding="async">
+              <span class="tilt-glare" aria-hidden="true"></span>
+            </div>
+            <div class="product-card__body">
+              <span class="badge badge--prime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Prime</span>
+              <h3 class="product-card__title">Digital Air Fryer, 4.5L</h3>
+              <div class="rating" data-rating="4.6" aria-label="Rated 4.6 out of 5 stars, 3,102 reviews">
+                <span class="rating__stars" aria-hidden="true"><span class="rating__stars-fill"></span></span>
+                <span class="rating__value">4.6</span>
+                <span class="rating__count">(3,102)</span>
+              </div>
+              <div class="product-card__price">
+                <span class="price-current">₹3,299</span>
+                <span class="price-original">₹4,999</span>
+              </div>
+              <a href="https://amazon.in" class="btn btn--dark btn--full" target="_blank" rel="nofollow sponsored noopener">
+                Buy on Amazon
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-card tilt" data-tilt data-reveal data-category="fashion" data-title="Classic Leather Sneakers">
+            <div class="product-card__media">
+              <span class="badge badge--discount">-37%</span>
+              <img class="product-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f2f2f4'/%3E%3Ccircle cx='200' cy='200' r='70' fill='%23e4e4e9'/%3E%3C/svg%3E" alt="Classic Leather Sneakers placeholder" width="400" height="400" loading="lazy" decoding="async">
+              <span class="tilt-glare" aria-hidden="true"></span>
+            </div>
+            <div class="product-card__body">
+              <span class="badge badge--prime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Prime</span>
+              <h3 class="product-card__title">Classic Leather Sneakers</h3>
+              <div class="rating" data-rating="4.4" aria-label="Rated 4.4 out of 5 stars, 958 reviews">
+                <span class="rating__stars" aria-hidden="true"><span class="rating__stars-fill"></span></span>
+                <span class="rating__value">4.4</span>
+                <span class="rating__count">(958)</span>
+              </div>
+              <div class="product-card__price">
+                <span class="price-current">₹2,199</span>
+                <span class="price-original">₹3,499</span>
+              </div>
+              <a href="https://amazon.in" class="btn btn--dark btn--full" target="_blank" rel="nofollow sponsored noopener">
+                Buy on Amazon
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Product 5 -->
+          <article class="product-card tilt" data-tilt data-reveal data-category="electronics" data-title="Portable Bluetooth Speaker">
+            <div class="product-card__media">
+              <span class="badge badge--discount">-41%</span>
+              <img class="product-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f2f2f4'/%3E%3Ccircle cx='200' cy='200' r='70' fill='%23e4e4e9'/%3E%3C/svg%3E" alt="Portable Bluetooth Speaker placeholder" width="400" height="400" loading="lazy" decoding="async">
+              <span class="tilt-glare" aria-hidden="true"></span>
+            </div>
+            <div class="product-card__body">
+              <span class="badge badge--prime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Prime</span>
+              <h3 class="product-card__title">Portable Bluetooth Speaker</h3>
+              <div class="rating" data-rating="4.2" aria-label="Rated 4.2 out of 5 stars, 1,540 reviews">
+                <span class="rating__stars" aria-hidden="true"><span class="rating__stars-fill"></span></span>
+                <span class="rating__value">4.2</span>
+                <span class="rating__count">(1,540)</span>
+              </div>
+              <div class="product-card__price">
+                <span class="price-current">₹1,299</span>
+                <span class="price-original">₹2,199</span>
+              </div>
+              <a href="https://amazon.in" class="btn btn--dark btn--full" target="_blank" rel="nofollow sponsored noopener">
+                Buy on Amazon
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Product 6 -->
+          <article class="product-card tilt" data-tilt data-reveal data-category="fitness" data-title="Premium Yoga Mat and Block Set">
+            <div class="product-card__media">
+              <span class="badge badge--discount">-40%</span>
+              <img class="product-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f2f2f4'/%3E%3Ccircle cx='200' cy='200' r='70' fill='%23e4e4e9'/%3E%3C/svg%3E" alt="Premium Yoga Mat and Block Set placeholder" width="400" height="400" loading="lazy" decoding="async">
+              <span class="tilt-glare" aria-hidden="true"></span>
+            </div>
+            <div class="product-card__body">
+              <span class="badge badge--prime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Prime</span>
+              <h3 class="product-card__title">Premium Yoga Mat &amp; Block Set</h3>
+              <div class="rating" data-rating="4.7" aria-label="Rated 4.7 out of 5 stars, 2,033 reviews">
+                <span class="rating__stars" aria-hidden="true"><span class="rating__stars-fill"></span></span>
+                <span class="rating__value">4.7</span>
+                <span class="rating__count">(2,033)</span>
+              </div>
+              <div class="product-card__price">
+                <span class="price-current">₹899</span>
+                <span class="price-original">₹1,499</span>
+              </div>
+              <a href="https://amazon.in" class="btn btn--dark btn--full" target="_blank" rel="nofollow sponsored noopener">
+                Buy on Amazon
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Product 7 -->
+          <article class="product-card tilt" data-tilt data-reveal data-category="beauty" data-title="Radiance Facial Skincare Gift Set">
+            <div class="product-card__media">
+              <span class="badge badge--discount">-42%</span>
+              <img class="product-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f2f2f4'/%3E%3Ccircle cx='200' cy='200' r='70' fill='%23e4e4e9'/%3E%3C/svg%3E" alt="Radiance Facial Skincare Gift Set placeholder" width="400" height="400" loading="lazy" decoding="async">
+              <span class="tilt-glare" aria-hidden="true"></span>
+            </div>
+            <div class="product-card__body">
+              <span class="badge badge--prime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Prime</span>
+              <h3 class="product-card__title">Radiance Facial Skincare Gift Set</h3>
+              <div class="rating" data-rating="4.5" aria-label="Rated 4.5 out of 5 stars, 764 reviews">
+                <span class="rating__stars" aria-hidden="true"><span class="rating__stars-fill"></span></span>
+                <span class="rating__value">4.5</span>
+                <span class="rating__count">(764)</span>
+              </div>
+              <div class="product-card__price">
+                <span class="price-current">₹1,099</span>
+                <span class="price-original">₹1,899</span>
+              </div>
+              <a href="https://amazon.in" class="btn btn--dark btn--full" target="_blank" rel="nofollow sponsored noopener">
+                Buy on Amazon
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Product 8 -->
+          <article class="product-card tilt" data-tilt data-reveal data-category="gaming" data-title="RGB Mechanical Gaming Keyboard">
+            <div class="product-card__media">
+              <span class="badge badge--discount">-38%</span>
+              <img class="product-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f2f2f4'/%3E%3Ccircle cx='200' cy='200' r='70' fill='%23e4e4e9'/%3E%3C/svg%3E" alt="RGB Mechanical Gaming Keyboard placeholder" width="400" height="400" loading="lazy" decoding="async">
+              <span class="tilt-glare" aria-hidden="true"></span>
+            </div>
+            <div class="product-card__body">
+              <span class="badge badge--prime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Prime</span>
+              <h3 class="product-card__title">RGB Mechanical Gaming Keyboard</h3>
+              <div class="rating" data-rating="4.6" aria-label="Rated 4.6 out of 5 stars, 1,289 reviews">
+                <span class="rating__stars" aria-hidden="true"><span class="rating__stars-fill"></span></span>
+                <span class="rating__value">4.6</span>
+                <span class="rating__count">(1,289)</span>
+              </div>
+              <div class="product-card__price">
+                <span class="price-current">₹2,799</span>
+                <span class="price-original">₹4,499</span>
+              </div>
+              <a href="https://amazon.in" class="btn btn--dark btn--full" target="_blank" rel="nofollow sponsored noopener">
+                Buy on Amazon
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="products__empty" id="productsEmptyState" hidden>No products match your search. Try a different keyword.</p>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section class="why-us" id="about">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Why DealsVault</span>
+          <h2>Why Choose Us</h2>
+          <p>A small team obsessed with making sure every deal is worth your time.</p>
+        </div>
+
+        <div class="why-us__grid" data-reveal-group>
+          <div class="feature-card" data-reveal>
+            <span class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></svg>
+            </span>
+            <h3>Trusted Recommendations</h3>
+            <p>Every product in the vault is checked for real reviews, consistent ratings and genuine seller history before it's ever listed.</p>
+          </div>
+
+          <div class="feature-card" data-reveal>
+            <span class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12.5l-8-8H4v8.5l8 8a1.5 1.5 0 0 0 2 0l6.5-6.5a1.5 1.5 0 0 0 0-2z"></path><circle cx="8" cy="8" r="1.5"></circle></svg>
+            </span>
+            <h3>Best Prices</h3>
+            <p>We track price history so a "deal" is an actual deal — not a markup-then-discount trick.</p>
+          </div>
+
+          <div class="feature-card" data-reveal>
+            <span class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="7" width="14" height="9" rx="1"></rect><path d="M15 10h4l3 3v3h-7z"></path><circle cx="6" cy="18" r="1.6"></circle><circle cx="17.5" cy="18" r="1.6"></circle></svg>
+            </span>
+            <h3>Fast Delivery</h3>
+            <p>Every pick ships through Amazon's own delivery network, so you get the speed and reliability you already trust.</p>
+          </div>
+
+          <div class="feature-card" data-reveal>
+            <span class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg>
+            </span>
+            <h3>Daily Updated Deals</h3>
+            <p>The vault refreshes every day — expired deals get pulled, new ones get added, so listings never go stale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="disclaimer-box">
+        <p><strong>Affiliate Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases.</p>
+      </div>
+
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <a href="#home" class="footer__logo">Deals<span>Vault</span></a>
+          <p>DealsVault is your trusted vault of hand-picked Amazon deals — verified, ranked and refreshed every day.</p>
+          <div class="footer__socials">
+            <a href="#" class="icon-btn" aria-label="Follow us on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <a href="#" class="icon-btn" aria-label="Follow us on X">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line></svg>
+            </a>
+            <a href="#" class="icon-btn" aria-label="Follow us on Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3V3z"></path></svg>
+            </a>
+            <a href="#" class="icon-btn" aria-label="Follow us on YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="5"></rect><polygon points="10 9.5 10 14.5 14.5 12" fill="currentColor" stroke="none"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#products">Deals</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#categories">Electronics</a></li>
+            <li><a href="#categories">Home &amp; Kitchen</a></li>
+            <li><a href="#categories">Fashion</a></li>
+            <li><a href="#categories">Fitness</a></li>
+            <li><a href="#categories">Beauty</a></li>
+            <li><a href="#categories">Gaming</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="year"></span> DealsVault. All rights reserved.</p>
+        <p class="footer__bottom-note">As an Amazon Associate, we earn from qualifying purchases.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
